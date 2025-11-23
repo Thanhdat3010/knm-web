@@ -101,7 +101,7 @@ Qua đó, đồ án muốn truyền tải thông điệp mạnh mẽ rằng: Th�
            
                     <div className="meta-tags">
                         <span className="tag">Drama</span>
-                        <span className="tag">Student Life</span>
+                        <span className="tag">Business Life</span>
                         <span className="tag">2025</span>
                         <span className="tag hd">HD</span>
                     </div>

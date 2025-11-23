@@ -1,6 +1,4 @@
-/* =========================================
-   NETFLIX / CINEMATIC THEME GLOBAL
-   ========================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
 
 body {
@@ -36,18 +34,20 @@ body {
 }
 
 /* =========================================
-   1. HERO SECTION (INTRO)
+   1. HERO SECTION (INTRO) - CENTERED STYLE
    ========================================= */
 .hero-section {
     position: relative;
-    height: 85vh; /* Chiếm 85% chiều cao màn hình */
+    height: 85vh;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Canh nội dung sang trái */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang (trục chính) */
+    padding: 0;
+    overflow: hidden;
 }
 
-/* Ảnh nền background */
+/* Ảnh nền & Gradient giữ nguyên */
 .hero-bg {
     position: absolute;
     top: 0;
@@ -55,67 +55,89 @@ body {
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: center top; 
     z-index: 0;
 }
 
-/* Lớp phủ gradient để làm nổi bật chữ */
 .hero-gradient {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, #141414 10%, rgba(20,20,20,0.6) 50%, rgba(20,20,20,0.4) 100%),
-                linear-gradient(to right, #141414 0%, rgba(20,20,20,0) 60%);
+    /* Gradient tối hơn ở giữa để làm nổi bật chữ trắng */
+    background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(20,20,20,0.8) 100%),
+                linear-gradient(to top, #141414 10%, transparent 50%);
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
-    padding-left: 5%; /* Đẩy nội dung vào một chút */
-    margin-top: 50px;
+    width: 100%;
+    max-width: 900px; /* Độ rộng tối đa của nội dung */
+    padding: 0 20px;  /* Khoảng cách an toàn 2 bên lề */
+    text-align: center; /* QUAN TRỌNG: Căn giữa toàn bộ văn bản */
+    margin-top: 0;
+    
+    /* Flex column để sắp xếp các phần tử dọc */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
 
 .hero-title {
-    font-size: 5rem;
+    font-size: 5rem; /* Chữ to ấn tượng */
     font-weight: 900;
-    color: #E50914; /* Đỏ Netflix */
-    text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+    color: #E50914;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.9);
     margin-bottom: 10px;
     letter-spacing: -2px;
+    line-height: 1.1;
+    text-transform: uppercase;
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
     font-weight: 700;
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    letter-spacing: 2px; /* Dãn chữ ra cho sang trọng */
 }
 
 .hero-desc {
     font-size: 1.2rem;
-    color: #fff;
-    margin-bottom: 30px;
-    max-width: 600px;
+    color: #e5e5e5;
+    margin-bottom: 35px;
+    max-width: 700px; /* Giới hạn chiều rộng đoạn văn để dễ đọc */
+    margin-left: auto;  /* Căn giữa block */
+    margin-right: auto; /* Căn giữa block */
     line-height: 1.6;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Căn giữa 2 nút bấm */
+.hero-buttons {
+    display: flex;
+    justify-content: center; /* Căn giữa các nút */
+    gap: 20px; /* Khoảng cách giữa 2 nút */
+    flex-wrap: wrap; /* Xuống dòng nếu màn hình quá nhỏ */
 }
 
 .hero-buttons .btn {
-    padding: 10px 30px;
+    padding: 12px 40px; /* Nút to hơn một chút */
     font-weight: 700;
-    font-size: 1.1rem;
-    margin-right: 15px;
+    font-size: 1.2rem;
     border: none;
     border-radius: 4px;
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
+    margin-right: 0; /* Reset margin cũ */
 }
 
 .hero-buttons .btn:hover {
-    transform: scale(1.05);
+    transform: translateY(-3px); /* Hiệu ứng nổi lên khi hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
 }
 
 .btn-netflix-white {
@@ -276,12 +298,24 @@ body {
    RESPONSIVE
    ========================================= */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 3rem;
+   .hero-title {
+        font-size: 3rem; /* Nhỏ lại trên mobile */
     }
+    
+    .hero-desc {
+        font-size: 1rem;
+        max-width: 100%; /* Full màn hình trên mobile */
+    }
+
     .hero-buttons .btn {
-        width: 100%;
+        width: 100%; /* Nút full chiều ngang trên mobile cho dễ bấm */
         margin-bottom: 10px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column; /* Xếp dọc nút trên mobile */
+        width: 100%;
+        gap: 10px;
     }
     .hero-content {
         padding-left: 20px;

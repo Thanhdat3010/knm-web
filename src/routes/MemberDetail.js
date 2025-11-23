@@ -14,12 +14,66 @@ import member5 from '../assets/member5.jpg';
 import member6 from '../assets/member6.jpg';
 
 const members = [
-  { id: 1, name: 'Hà Trần Bội Anh', nickname: 'Anh Trần', img: member1, traits: 'Hay cười', hobby: 'Đọc sách', goal: 'Sống an nhàn', darkside: 'Không chịu trách nhiệm sau 22h' },
-  { id: 2, name: 'Trương Thành Đạt', nickname: 'Dat T. Truong', img: member2, traits: 'Hiền hòa', hobby: 'Game', goal: 'Có người yêu', darkside: 'Hay nói chuyện vô tri' },
-  { id: 3, name: 'Võ Lê Hoàng', nickname: 'Salt Poyz', img: member3, traits: 'Hòa đồng', hobby: 'Rubik', goal: 'Săn phú bà', darkside: 'Không có mặt sáng' },
-  { id: 4, name: 'Nguyễn Đình Hùng', nickname: 'Alex Ben', img: member4, traits: 'Chưa cập nhật', hobby: 'Gym', goal: 'Trở thành Leader', darkside: 'Thích deadline' },
-  { id: 5, name: 'Hồ Đăng Thiên Phúc', nickname: 'PHC', img: member5, traits: 'Trầm tính', hobby: 'Code dạo', goal: 'Fullstack Dev', darkside: 'Silent but deadly' },
-  { id: 6, name: 'Nguyễn Quốc Tuấn', nickname: 'Tuấn', img: member6, traits: 'Vui vẻ', hobby: 'Đá banh', goal: 'Master AI', darkside: 'Ngủ nướng' }
+  { 
+    id: 1, 
+    name: 'Hà Trần Bội Anh', 
+    nickname: 'Anh Trần siu cấp vjp pro', 
+    img: member1, 
+    traits: 'Hay cười và bị khờ', 
+    hobby: 'Đọc sách, truyện; nghe nhạc; cầu lông; đánh đàn;...', 
+    goal: 'Sống an nhàn ở tủi 20, có (anh chủ) homestay trên đà lạt =))))', 
+    darkside: 'Không chịu trách nhiệm cho bất cứ hành động nào sau 22h' 
+  },
+  { 
+    id: 2, 
+    name: 'Trương Thành Đạt', 
+    nickname: 'Dat T. Truong', 
+    img: member2, 
+    traits: 'Hiền hòa dễ nuôi', 
+    hobby: 'Chơi game, cầu lông, chơi cờ, đánh piano, nghe nhạc', 
+    goal: 'Có người yêu', 
+    darkside: 'Lâu lâu nói chuyện vô tri' 
+  },
+  { 
+    id: 3, 
+    name: 'Võ Lê Hoàng', 
+    nickname: 'Hoàng Salt Poyz', 
+    img: member3, 
+    traits: 'Hướng lung tung, hoà đồng với bạn bè', 
+    hobby: 'Chơi thể thao, chơi game, giải rubik, tập gym', 
+    goal: 'Săn phú bà', 
+    darkside: 'Không có mặt sáng' 
+  },
+  { 
+    id: 4, 
+    name: 'Nguyễn Đình Hùng', 
+    nickname: 'Ben Alex hay Alex Ben hay Bex Len hay Alẽ', 
+    img: member4, 
+    traits: 'Một tổ hợp không hề dễ chịu của vui vẻ và trầm kẻm', 
+    hobby: 'Mọi thứ có thể làm cho tui tò mò (even sth dark 😈)', 
+    goal: 'Lật đổ 🔥🔥🔥', 
+    darkside: 'Hay thao túng tâm lý người khác 👀' 
+  },
+  { 
+    id: 5, 
+    name: 'Hồ Đăng Thiên Phúc', 
+    nickname: 'PHC', 
+    img: member5, 
+    traits: 'Hòa đồng với bạn bè', 
+    hobby: 'Cầu lông, chơi game, đá banh, nghe nhạc', 
+    goal: 'Học tốt lập trình', 
+    darkside: 'Dễ nổi nóng' 
+  },
+  { 
+    id: 6, 
+    name: 'Nguyễn Quốc Tuấn', 
+    nickname: 'Nguyễn Quốc Tuấn', 
+    img: member6, 
+    traits: 'Hướng nội', 
+    hobby: 'Đọc truyện tranh, tiểu thuyết, chơi game, chơi đàn, tập gym', 
+    goal: 'Qua môn, đi concert idol', 
+    darkside: 'Hay tách lẻ' 
+  }
 ];
 
 export default function MemberDetail() {
