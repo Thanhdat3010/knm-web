@@ -1,133 +1,58 @@
 import React from "react";
-import logo from "../assets/logo.png"; // Thay đổi đường dẫn logo nếu cần
+import logo from "../assets/logo.png";
 import "./Footer.css";
-import { Link } from "react-scroll"; // Import Link từ react-scroll
 
 const Footer = () => {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <footer className="footer py-4">
-      <div className="container">
+    <footer className="footer mt-5">
+      <div className="container footer-container">
         <div className="row">
-          <div className="col-md-4 mb-3 text-center text-md-start">
-            <img
-              src={logo}
-              alt="Logo"
-              className="footer-logo"
-            />
-            <p className="mb-1">
-              fivecreatorsgroup@gmail.com <br />
-              Thành phố Hồ Chí Minh <br />
+
+          {/* LEFT */}
+          <div className="col-md-4 footer-left text-center text-md-start">
+            <img src={logo} alt="Logo" className="footer-logo" />
+            <p className="footer-info">
+              Nhóm Mê đu sà <br />
+              Đại học Khoa học Tự nhiên – ĐHQG TP.HCM <br />
               Việt Nam
             </p>
-            {/* <p className="mb-1">
-              <a href="https://www.nhotovietnam.com/">Nhỏ To Việt Nam (Nguyễn Minh Ngọc)</a>
-            </p> */}
+            <p className="footer-email">medusa.team.contact@gmail.com</p>
           </div>
 
-          <div className="col-md-4 mb-3 text-center">
-            <h5 className="mb-3">Điều hướng</h5>
-            <ul className="list-unstyled">
-              <li>
-                <Link
-                  to="trangchu"
-                  smooth={true}
-                  duration={500}
-                  className="footer-link"
-                >
-                  Trang chủ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="vanhoa"
-                  smooth={true}
-                  duration={500}
-                  className="footer-link"
-                >
-                  Khám Phá Văn Hóa
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="thongdiep"
-                  smooth={true}
-                  duration={500}
-                  className="footer-link"
-                >
-                  Thông Điệp
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="sumenh"
-                  smooth={true}
-                  duration={500}
-                  className="footer-link"
-                >
-                  Sứ Mệnh
-                </Link>
-              </li>
+          {/* MIDDLE */}
+          <div className="col-md-4 footer-middle text-center">
+            <h5 className="footer-title">Điều hướng</h5>
+            <ul className="footer-menu">
+              <li onClick={() => scrollToSection("intro")}>Trang chủ</li>
+              <li onClick={() => scrollToSection("about")}>Giới thiệu nhóm</li>
+              <li onClick={() => scrollToSection("members")}>Thành viên</li>
+              <li onClick={() => scrollToSection("gallery")}>Hình ảnh</li>
+              <li onClick={() => scrollToSection("project")}>Dự án</li>
             </ul>
           </div>
 
-          <div className="col-md-4 mb-3 text-center text-md-end">
-            <h5 className="mb-3">Mạng xã hội</h5>
-            <ul className="list-unstyled d-flex justify-content-center justify-content-md-end gap-3">
-              <li>
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-link"
-                >
-                  Facebook
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://youtube.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-link"
-                >
-                  YouTube
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-link"
-                >
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://tiktok.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-link"
-                >
-                  TikTok
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="social-link"
-                >
-                  LinkedIn
-                </a>
-              </li>
-            </ul>
+          {/* RIGHT */}
+          <div className="col-md-4 footer-right text-center text-md-end">
+            <h5 className="footer-title">Mạng xã hội</h5>
+            <div className="social-links">
+
+              <a href="#" className="social-link">Facebook</a>
+              <a href="#" className="social-link">YouTube</a>
+              <a href="#" className="social-link">Instagram</a>
+              <a href="#" className="social-link">TikTok</a>
+
+            </div>
           </div>
+
         </div>
-        <div className="text-center mt-4">
-          <p>© {new Date().getFullYear()} bản quyền của EthnoCraft</p>
+
+        <div className="footer-bottom text-center mt-4">
+          © {new Date().getFullYear()} Nhóm Mê đu sà — Tất cả bản quyền được bảo lưu.
         </div>
       </div>
     </footer>

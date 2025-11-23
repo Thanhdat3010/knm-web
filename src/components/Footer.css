@@ -1,0 +1,104 @@
+/* ===============================
+   FOOTER WRAPPER
+================================*/
+.footer {
+  background: #f8f9ff;
+  border-top: 1px solid #e5e5e5;
+  padding: 50px 0 30px;
+}
+
+.footer-container {
+  max-width: 1200px;
+}
+
+/* ===============================
+   LEFT COLUMN
+================================*/
+.footer-logo {
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+.footer-info {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.footer-email {
+  color: #005ae0;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* ===============================
+   MIDDLE – MENU
+================================*/
+.footer-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu li {
+  cursor: pointer;
+  color: #222;
+  padding: 6px 0;
+  font-size: 16px;
+  transition: 0.2s ease;
+}
+
+.footer-menu li:hover {
+  color: #005ae0;
+  transform: translateX(4px);
+}
+
+/* ===============================
+   RIGHT – SOCIAL LINKS
+================================*/
+.social-links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  color: #005ae0;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.social-link:hover {
+  color: #003e99;
+  text-decoration: underline;
+}
+
+/* ===============================
+   FOOTER BOTTOM
+================================*/
+.footer-bottom {
+  font-size: 14px;
+  color: #666;
+  margin-top: 20px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================*/
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center !important;
+  }
+}

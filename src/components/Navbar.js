@@ -56,9 +56,9 @@ const Navbar = () => {
           </RBNav>
 
           {/* LOGIN BUTTON */}
-          <RBNav className="btn-login">
+          {/* <RBNav className="btn-login">
             <RBNav.Link href="#">ĐĂNG NHẬP</RBNav.Link>
-          </RBNav>
+          </RBNav> */}
 
         </RBNavbar.Collapse>
       </Container>
