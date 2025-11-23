@@ -1,0 +1,175 @@
+/* ==== GLOBAL ==== */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* ==== INTRO SECTION ==== */
+.intro-section {
+    background: linear-gradient(135deg, #e6f0ff, #ffffff);
+}
+
+.intro-logo {
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.intro-image {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+}
+
+/* ==== ABOUT SECTION ==== */
+.about-section {
+    background: #fafafa;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.download-btn {
+    margin-top: 20px;
+    background: #005ae0;
+    border: none;
+}
+.download-btn:hover {
+    background: #0045b8;
+}
+
+/* ==== MEMBERS SECTION ==== */
+.members-section {
+    background: white;
+}
+
+.member-card {
+    text-align: center;
+    padding: 20px 10px;
+    margin-bottom: 40px;
+    transition: 0.25s;
+}
+
+.member-card:hover {
+    transform: translateY(-6px);
+}
+
+.member-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.15);
+    margin-bottom: 15px;
+}
+
+.nickname {
+    color: #777;
+    font-size: 14px;
+}
+
+.view-btn {
+    margin-top: 10px;
+    padding: 6px 18px;
+}
+
+/* ==== GALLERY ==== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery-box {
+    height: 150px;
+    background: #eee;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* ==== PROJECT SECTION ==== */
+.project-section {
+    background: #f5faff;
+    border-top: 1px solid #e8f1ff;
+}
+
+.project-description {
+    font-size: 18px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ==== MODAL ==== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 550px;
+    padding: 30px;
+    border-radius: 14px;
+    position: relative;
+    animation: fadeIn 0.25s ease-out;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.25);
+}
+
+.modal-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    border: none;
+    background: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}

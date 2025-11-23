@@ -1,0 +1,93 @@
+/* ===============================
+   NAVBAR WRAPPER
+================================*/
+.custom-navbar {
+  background: #ffffff;
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+  transition: background 0.25s ease, padding 0.25s ease;
+  z-index: 9999;
+}
+
+/* ===============================
+   LOGO
+================================*/
+.navbar-logo {
+  height: 55px;
+  transition: 0.25s ease-in-out;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+/* ===============================
+   MENU ITEMS
+================================*/
+.custom-nav .nav-link {
+  font-size: 17px;
+  margin-right: 16px;
+  color: #333 !important;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.custom-nav .nav-link:hover {
+  color: #005ae0 !important;
+  transform: translateY(-2px);
+}
+
+/* ==== ACTIVE STATE (nếu bạn muốn highlight menu) ==== */
+/* Uncomment nếu muốn active highlight
+.custom-nav .nav-link.active {
+  color: #005ae0 !important;
+  font-weight: 700;
+}
+*/
+
+/* ===============================
+   LOGIN BUTTON
+================================*/
+.btn-login .nav-link {
+  font-weight: 600;
+  color: #005ae0 !important;
+  border: 1px solid #005ae0;
+  padding: 7px 16px;
+  border-radius: 6px;
+  transition: 0.25s ease-in-out;
+}
+
+.btn-login .nav-link:hover {
+  background: #005ae0;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================*/
+@media (max-width: 991px) {
+  .custom-nav .nav-link {
+    margin: 10px 0;
+    padding-left: 5px;
+    font-size: 18px;
+  }
+
+  .btn-login {
+    margin-top: 10px;
+  }
+
+  .navbar-logo {
+    height: 50px;
+  }
+}
+
+/* ===============================
+   ON SCROLL EFFECT (optional)
+================================*/
+/* Khi muốn navbar nhỏ lại khi scroll:
+   – nếu cần, bật JS mình sẽ viết cho */
+.navbar-scrolled {
+  padding: 6px 0 !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
