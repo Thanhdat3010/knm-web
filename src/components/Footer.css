@@ -1,43 +1,63 @@
 /* ===============================
-   FOOTER WRAPPER
+   FOOTER WRAPPER (CINEMATIC)
 ================================*/
 .footer {
-  background: #f8f9ff;
-  border-top: 1px solid #e5e5e5;
-  padding: 50px 0 30px;
+  background-color: #141414; /* Màu đen chuẩn Netflix */
+  border-top: 1px solid #333; /* Viền trên mờ tinh tế */
+  padding: 80px 0 40px;
+  color: #808080; /* Màu chữ xám nhạt dễ chịu cho mắt */
+  font-family: 'Roboto', sans-serif;
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 1100px;
 }
 
 /* ===============================
    LEFT COLUMN
 ================================*/
 .footer-logo {
-  height: 70px;
-  margin-bottom: 15px;
+  height: 60px;
+  margin-bottom: 20px;
+  /* Đảo ngược màu logo thành trắng nếu logo gốc màu đen */
+  filter: brightness(0) invert(1); 
+  opacity: 0.7; /* Làm mờ logo một chút cho sang */
+  transition: opacity 0.3s;
+}
+
+.footer-logo:hover {
+    opacity: 1;
 }
 
 .footer-info {
-  color: #333;
-  font-size: 15px;
-  line-height: 1.6;
+  color: #808080;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
 }
 
 .footer-email {
-  color: #005ae0;
-  font-weight: 600;
-  margin-top: 8px;
+  color: #b3b3b3;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.footer-email:hover {
+  color: #E50914; /* Hover màu đỏ Netflix */
 }
 
 /* ===============================
    MIDDLE – MENU
 ================================*/
 .footer-title {
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  color: #fff; /* Tiêu đề màu trắng */
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .footer-menu {
@@ -48,15 +68,16 @@
 
 .footer-menu li {
   cursor: pointer;
-  color: #222;
-  padding: 6px 0;
-  font-size: 16px;
-  transition: 0.2s ease;
+  color: #808080;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
 }
 
 .footer-menu li:hover {
-  color: #005ae0;
-  transform: translateX(4px);
+  color: #ffffff; /* Hover thành màu trắng */
+  text-decoration: underline; /* Gạch chân giống style web phim */
+  transform: translateX(5px);
 }
 
 /* ===============================
@@ -64,30 +85,49 @@
 ================================*/
 .social-links {
   display: flex;
-  gap: 12px;
-  justify-content: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
+  flex-direction: column; /* Xếp dọc nhìn cho giống danh sách credit */
+  gap: 10px;
+  align-items: center; /* Canh giữa trên mobile */
+}
+
+/* Trên màn hình lớn thì canh phải */
+@media (min-width: 768px) {
+    .social-links {
+        align-items: flex-end;
+    }
 }
 
 .social-link {
-  color: #005ae0;
-  font-weight: 600;
-  transition: 0.2s;
+  color: #808080;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s;
 }
 
 .social-link:hover {
-  color: #003e99;
-  text-decoration: underline;
+  color: #E50914; /* Màu đỏ nổi bật khi hover */
+  padding-right: 5px; /* Hiệu ứng đẩy nhẹ sang trái */
+}
+
+.footer-tagline {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #555;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    display: inline-block;
 }
 
 /* ===============================
    FOOTER BOTTOM
 ================================*/
 .footer-bottom {
-  font-size: 14px;
-  color: #666;
-  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #555; /* Màu chữ tối hơn chút để không gây chú ý */
+  margin-top: 50px;
+  border-top: 1px solid #222;
+  padding-top: 30px;
 }
 
 /* ===============================
@@ -96,9 +136,16 @@
 @media (max-width: 768px) {
   .footer {
     text-align: center;
+    padding: 50px 0 30px;
   }
 
-  .social-links {
-    justify-content: center !important;
+  .footer-left, .footer-middle, .footer-right {
+    margin-bottom: 40px;
+  }
+  
+  .footer-logo {
+      height: 50px;
+      margin: 0 auto 20px auto;
+      display: block;
   }
 }

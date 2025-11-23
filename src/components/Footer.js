@@ -5,54 +5,69 @@ import "./Footer.css";
 const Footer = () => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
-    if (element) element.scrollIntoView({ behavior: "smooth" });
+    if (element) {
+        // Trừ đi chiều cao navbar để scroll chính xác hơn
+        const headerOffset = 70; 
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
+    }
   };
 
   return (
-    <footer className="footer mt-5">
+    <footer className="footer">
       <div className="container footer-container">
         <div className="row">
 
-          {/* LEFT */}
-          <div className="col-md-4 footer-left text-center text-md-start">
+          {/* LEFT - LOGO & INFO */}
+          <div className="col-md-4 footer-left text-center text-md-start mb-4 mb-md-0">
             <img src={logo} alt="Logo" className="footer-logo" />
             <p className="footer-info">
-              Nhóm Mê đu sà <br />
+              <strong>Nhóm Mê đu sà</strong> <br />
               Đại học Khoa học Tự nhiên – ĐHQG TP.HCM <br />
-              Việt Nam
+              K2025 • Lớp Điện ảnh & Truyền thông
             </p>
-            <p className="footer-email">medusa.team.contact@gmail.com</p>
+            <p className="footer-email">
+                <i className="bi bi-envelope-fill me-2"></i>
+                medusa.team.contact@gmail.com
+            </p>
           </div>
 
-          {/* MIDDLE */}
-          <div className="col-md-4 footer-middle text-center">
-            <h5 className="footer-title">Điều hướng</h5>
+          {/* MIDDLE - NAVIGATION */}
+          <div className="col-md-4 footer-middle text-center mb-4 mb-md-0">
+            <h5 className="footer-title">Khám Phá</h5>
             <ul className="footer-menu">
               <li onClick={() => scrollToSection("intro")}>Trang chủ</li>
-              <li onClick={() => scrollToSection("about")}>Giới thiệu nhóm</li>
-              <li onClick={() => scrollToSection("members")}>Thành viên</li>
-              <li onClick={() => scrollToSection("gallery")}>Hình ảnh</li>
-              <li onClick={() => scrollToSection("project")}>Dự án</li>
+              <li onClick={() => scrollToSection("about")}>Giới thiệu</li>
+              <li onClick={() => scrollToSection("members")}>Diễn viên (Cast)</li>
+              <li onClick={() => scrollToSection("bts")}>Hậu trường (BTS)</li>
+              <li onClick={() => scrollToSection("project")}>Dự án phim</li>
             </ul>
           </div>
 
-          {/* RIGHT */}
+          {/* RIGHT - SOCIAL */}
           <div className="col-md-4 footer-right text-center text-md-end">
-            <h5 className="footer-title">Mạng xã hội</h5>
+            <h5 className="footer-title">Kết Nối</h5>
             <div className="social-links">
-
               <a href="#" className="social-link">Facebook</a>
               <a href="#" className="social-link">YouTube</a>
               <a href="#" className="social-link">Instagram</a>
               <a href="#" className="social-link">TikTok</a>
-
             </div>
+            <p className="footer-tagline mt-3">
+                "Cháy hết mình vì nghệ thuật."
+            </p>
           </div>
 
         </div>
 
-        <div className="footer-bottom text-center mt-4">
-          © {new Date().getFullYear()} Nhóm Mê đu sà — Tất cả bản quyền được bảo lưu.
+        {/* BOTTOM COPYRIGHT */}
+        <div className="footer-bottom text-center mt-5">
+          <p>© {new Date().getFullYear()} Nhóm Mê đu sà. Dự án phim ngắn "Đánh Đổi".</p>
         </div>
       </div>
     </footer>

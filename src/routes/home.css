@@ -1,186 +1,296 @@
-/* ==== GLOBAL ==== */
+/* =========================================
+   NETFLIX / CINEMATIC THEME GLOBAL
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+body {
+    background-color: #141414; /* Màu nền đen đặc trưng Netflix */
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.netflix-wrapper {
+    background-color: #141414;
+    min-height: 100vh;
+}
+
+/* Loại bỏ padding mặc định của section để tạo cảm giác liền mạch */
 .section {
-    padding: 80px 0;
+    padding: 40px 0;
+}
+
+.dark-section {
+    background-color: #141414;
 }
 
 .section-title {
-    font-size: 36px;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-p {
-    line-height: 1.6;
-}
-
-/* ==== INTRO SECTION ==== */
-.intro-section {
-    padding-top: 120px; /* Đẩy xuống bằng chiều cao navbar */
-}
-
-.intro-logo {
-    width: 180px;
+    color: #e5e5e5;
     margin-bottom: 20px;
+    border-left: 4px solid #E50914; /* Vạch đỏ Netflix */
+    padding-left: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.intro-text {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.intro-image {
+/* =========================================
+   1. HERO SECTION (INTRO)
+   ========================================= */
+.hero-section {
+    position: relative;
+    height: 85vh; /* Chiếm 85% chiều cao màn hình */
     width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.12);
-}
-
-/* ==== ABOUT SECTION ==== */
-.about-section {
-    background: #fafafa;
-    border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-}
-
-.download-btn {
-    margin-top: 20px;
-    background: #005ae0;
-    border: none;
-}
-.download-btn:hover {
-    background: #0045b8;
-}
-
-/* ==== MEMBERS SECTION ==== */
-.members-section {
-    background: white;
-}
-
-.member-card {
-    text-align: center;
-    padding: 20px 10px;
-    margin-bottom: 40px;
-    transition: 0.25s;
-}
-
-.member-card:hover {
-    transform: translateY(-6px);
-}
-
-.member-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 3px 20px rgba(0,0,0,0.15);
-    margin-bottom: 15px;
-}
-
-.nickname {
-    color: #777;
-    font-size: 14px;
-}
-
-.view-btn {
-    margin-top: 10px;
-    padding: 6px 18px;
-}
-
-/* ==== GALLERY ==== */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.gallery-box {
-    height: 150px;
-    background: #eee;
-    border-radius: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: #666;
-    font-weight: 500;
-    font-size: 16px;
+    justify-content: flex-start; /* Canh nội dung sang trái */
 }
 
-/* ==== PROJECT SECTION ==== */
-.project-section {
-    background: #f5faff;
-    border-top: 1px solid #e8f1ff;
-}
-
-.project-description {
-    font-size: 18px;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* ==== MODAL ==== */
-.modal-overlay {
-    position: fixed;
+/* Ảnh nền background */
+.hero-bg {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(4px);
-    background: rgba(0,0,0,0.45);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
 }
 
-.modal-content {
-    background: white;
-    width: 90%;
-    max-width: 550px;
-    padding: 30px;
-    border-radius: 14px;
+/* Lớp phủ gradient để làm nổi bật chữ */
+.hero-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #141414 10%, rgba(20,20,20,0.6) 50%, rgba(20,20,20,0.4) 100%),
+                linear-gradient(to right, #141414 0%, rgba(20,20,20,0) 60%);
+    z-index: 1;
+}
+
+.hero-content {
     position: relative;
-    animation: fadeIn 0.25s ease-out;
-    box-shadow: 0 5px 35px rgba(0,0,0,0.25);
+    z-index: 2;
+    max-width: 800px;
+    padding-left: 5%; /* Đẩy nội dung vào một chút */
+    margin-top: 50px;
 }
 
-.modal-img {
-    width: 160px;
-    height: 160px;
-    border-radius: 12px;
-    object-fit: cover;
+.hero-title {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #E50914; /* Đỏ Netflix */
+    text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
     margin-bottom: 20px;
 }
 
-.close-btn {
-    position: absolute;
-    right: 12px;
-    top: 12px;
-    border: none;
-    background: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #333;
+.hero-desc {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
-.close-btn:hover {
+.hero-buttons .btn {
+    padding: 10px 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-right: 15px;
+    border: none;
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+
+.hero-buttons .btn:hover {
+    transform: scale(1.05);
+}
+
+.btn-netflix-white {
+    background-color: #ffffff;
     color: #000;
 }
 
-/* Animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-}
-.intro-group-img {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+.btn-netflix-gray {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: #fff;
 }
 
-.intro-text {
-  font-size: 18px;
-  margin-bottom: 20px;
+/* =========================================
+   2. MEMBERS (MOVIE POSTER STYLE)
+   ========================================= */
+.movie-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, z-index 0.3s;
+    position: relative;
+}
+
+.movie-card:hover {
+    transform: scale(1.2); /* Phóng to khi hover giống Netflix */
+    z-index: 10;
+}
+
+.poster-frame {
+    width: 100%;
+    aspect-ratio: 2 / 3; /* Tỷ lệ chuẩn poster phim */
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.poster-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-info {
+    margin-top: 10px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.movie-card:hover .movie-info {
+    opacity: 1;
+}
+
+.movie-info h5 {
+    font-size: 1rem;
+    margin-bottom: 2px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.movie-info p {
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/* =========================================
+   3. PROJECT INFO & TAGS
+   ========================================= */
+.project-desc {
+    font-size: 1.4rem;
+    color: #ccc;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    font-weight: 300;
+}
+
+.meta-tags {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.tag {
+    color: #a3a3a3;
+    font-size: 0.9rem;
+    border-right: 1px solid #404040;
+    padding-right: 15px;
+}
+.tag:last-child {
+    border: none;
+}
+
+.tag.hd {
+    border: 1px solid #a3a3a3;
+    border-radius: 3px;
+    padding: 0 5px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/* =========================================
+   4. BTS CAROUSEL
+   ========================================= */
+.bts-carousel-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    border: 1px solid #333;
+}
+
+.bts-video {
+    width: 100%;
+    height: auto;
+    outline: none;
+}
+
+.netflix-caption {
+    bottom: 40px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.carousel-indicators .active {
+    background-color: #E50914; /* Chấm đỏ */
+}
+
+/* =========================================
+   5. GALLERY GRID
+   ========================================= */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    background-color: #333;
+    height: 150px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+    background-size: cover;
+    /* Thêm hình nền giả lập nếu muốn */
+    background-image: linear-gradient(45deg, #222, #444);
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+    z-index: 5;
+    border: 2px solid #fff;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .hero-content {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+    .hero-section {
+        justify-content: center;
+    }
+    .movie-card:hover {
+        transform: scale(1.05); /* Zoom ít hơn trên mobile */
+    }
 }
