@@ -184,9 +184,10 @@ body {
 .project-desc {
     font-size: 1.4rem;
     color: #ccc;
-    max-width: 800px;
     margin: 0 auto 30px auto;
     font-weight: 300;
+        text-align: justify; /* chữ canh đều 2 bên */
+
 }
 
 .meta-tags {

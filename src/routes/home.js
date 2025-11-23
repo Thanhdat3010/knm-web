@@ -91,9 +91,14 @@ const Home = () => {
                 <Col md={12} className="text-center">
                     <h2 className="section-title">Dự án "Đánh Đổi"</h2>
                     <p className="project-desc">
-                        "Một bộ phim ngắn tâm lý về áp lực của sinh viên trong xã hội hiện đại. 
-                        Khi sự thành công được đo đếm bằng điểm số, liệu cái giá phải trả là gì?"
+                        Đồ án video này mang tên "Đánh Đổi" nhằm mục tiêu thức tỉnh sinh viên về cái giá tàn khốc của việc đánh đổi sức khỏe để theo đuổi thành công. Câu chuyện theo chân Nam, một người trẻ bị lòng đố kỵ và hối tiếc chi phối, người đã ký giao ước với một Hệ thống bí ẩn để đổi sinh mệnh lấy danh vọng và chiến thắng tình địch.
+Xuyên suốt bộ phim là hình ảnh ẩn dụ về việc Nam liên tục hy sinh giấc ngủ, sức khỏe và các mối quan hệ (yếu tố cốt lõi của Well-being) để đạt được thành công sự nghiệp. Bi kịch lên đến đỉnh điểm khi Nam ngất xỉu và được chẩn đoán mắc ung thư giai đoạn cuối, nhận ra mọi thành tựu đều vô nghĩa.
+Qua đó, đồ án muốn truyền tải thông điệp mạnh mẽ rằng: Thành công đạt được bằng cái giá của sức khỏe là một thất bại; hãy trân trọng sự cân bằng và các mối quan hệ trước khi quá muộn.
                     </p>
+                    <p className="project-desc">
+                    
+                    </p>
+           
                     <div className="meta-tags">
                         <span className="tag">Drama</span>
                         <span className="tag">Student Life</span>
