@@ -16,7 +16,7 @@ p {
 
 /* ==== INTRO SECTION ==== */
 .intro-section {
-    background: linear-gradient(135deg, #e6f0ff, #ffffff);
+    padding-top: 120px; /* Đẩy xuống bằng chiều cao navbar */
 }
 
 .intro-logo {

@@ -5,6 +5,8 @@ import { Button, Container, Row, Col } from 'react-bootstrap';
 import './home.css';
 import groupPhoto from '../assets/group.png';
 import { Link } from "react-router-dom";
+import Carousel from 'react-bootstrap/Carousel';
+
 
 // Member images (placeholder)
 import member1 from '../assets/member1.jpg';
@@ -30,6 +32,7 @@ const Home = () => {
       <MultiLevelNavbar />
 
             {/* INTRO */}
+        <div className='container'>
         <section id="intro" className="section intro-section">
         <Container>
             <Row className="align-items-center justify-content-center text-center">
@@ -51,7 +54,7 @@ const Home = () => {
             </Row>
         </Container>
         </section>
-
+</div>
 
       {/* ABOUT */}
       <section id="about" className="section about-section">
