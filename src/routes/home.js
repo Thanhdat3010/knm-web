@@ -3,7 +3,7 @@ import MultiLevelNavbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Button, Container, Row, Col } from 'react-bootstrap';
 import './home.css';
-import groupPhoto from '../assets/group.png';
+import groupPhoto from '../assets/group_photo.jpg';
 import { Link } from "react-router-dom";
 import Carousel from 'react-bootstrap/Carousel';
 
