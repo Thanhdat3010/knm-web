@@ -7,7 +7,6 @@ import groupPhoto from '../assets/group.png';
 import { Link } from "react-router-dom";
 import Carousel from 'react-bootstrap/Carousel';
 
-// Member images
 import member1 from '../assets/member1.jpg';
 import member2 from '../assets/member2.jpg';
 import member3 from '../assets/member3.jpg';
@@ -36,7 +35,7 @@ const Home = () => {
     <div className="netflix-wrapper">
       <MultiLevelNavbar />
 
-      {/* 1. HERO SECTION (INTRO) - Style Netflix */}
+      {/* 1. HERO SECTION (INTRO)*/}
       <section id="intro" className="hero-section">
         {/* Ảnh nền với lớp phủ tối */}
         <div className="hero-bg" style={{ backgroundImage: `url(${groupPhoto})` }}></div>
@@ -60,7 +59,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 2. MEMBERS (THE CAST) */}
+      {/* 2. MEMBERS*/}
       <section id="members" className="section dark-section">
         <Container fluid className="px-5">
           <h2 className="section-title">Diễn viên & Ekip (The Cast)</h2>
@@ -139,7 +138,7 @@ Qua đó, đồ án muốn truyền tải thông điệp mạnh mẽ rằng: Th�
       </section>
 
       {/* 5. GALLERY (Grid images) */}
-      <section id="gallery" className="section dark-section pb-5">
+      {/* <section id="gallery" className="section dark-section pb-5">
         <Container fluid className="px-5">
           <h2 className="section-title">Hình ảnh nổi bật</h2>
           <div className="gallery-grid">
@@ -150,7 +149,7 @@ Qua đó, đồ án muốn truyền tải thông điệp mạnh mẽ rằng: Th�
             ))}
           </div>
         </Container>
-      </section>
+      </section> */}
 
       <Footer />
     </div>
