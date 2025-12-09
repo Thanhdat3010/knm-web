@@ -52,7 +52,7 @@ const Home = () => {
                 <Button variant="light" className="btn-netflix-white" href="#members">
                     <i className="bi bi-play-fill"></i> Khám Phá (Cast)
                 </Button>
-                <Button variant="secondary" className="btn-netflix-gray" onClick={() => window.open('/hop_dong.pdf', '_blank')}>
+                <Button variant="secondary" className="btn-netflix-gray" onClick={() => window.open('/hopdong.pdf', '_blank')}>
                     <i className="bi bi-info-circle"></i> Tài Liệu
                 </Button>
             </div>
