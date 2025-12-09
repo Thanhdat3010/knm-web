@@ -28,12 +28,8 @@ const Footer = () => {
             <img src={logo} alt="Logo" className="footer-logo" />
             <p className="footer-info">
               <strong>Nhóm Mê đu sà</strong> <br />
-              Đại học Khoa học Tự nhiên – ĐHQG TP.HCM <br />
-              K2025 • Lớp Điện ảnh & Truyền thông
-            </p>
-            <p className="footer-email">
-                <i className="bi bi-envelope-fill me-2"></i>
-                medusa.team.contact@gmail.com
+              Trường Đại học Khoa học Tự nhiên – ĐHQG TP.HCM <br />
+              K25 • C11
             </p>
           </div>
 
