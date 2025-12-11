@@ -15,66 +15,98 @@ import member6 from '../assets/member6.jpg';
 
 const members = [
   { 
-    id: 1, 
-    name: 'Hà Trần Bội Anh', 
-    nickname: 'Anh Trần siu cấp vjp pro', 
-    img: member1, 
-    traits: 'Hay cười và bị khờ', 
-    hobby: 'Đọc sách, truyện; nghe nhạc; cầu lông; đánh đàn;...', 
-    goal: 'Sống an nhàn ở tủi 20, có (anh chủ) homestay trên đà lạt =))))', 
-    darkside: 'Không chịu trách nhiệm cho bất cứ hành động nào sau 22h' 
+    id: 1,
+    name: 'Hà Trần Bội Anh',
+    nickname: 'Anh Trần siu cấp vjp pro',
+    img: member1,
+    traits: 'Hay cười và bị khờ',
+    hobby: 'Đọc sách, truyện; nghe nhạc; cầu lông; đánh đàn;...',
+    goal: 'Sống an nhàn ở tủi 20, có (anh chủ) homestay trên đà lạt =))))',
+    darkside: 'Không chịu trách nhiệm cho bất cứ hành động nào sau 22h',
+    
+    // ➕ THÊM MỚI
+    mssv: '25127013',
+    phone: '0943170431',
+    email: 'htbanh2527@clc.fitus.edu.vn',
+    role: 'Nhóm trưởng'
   },
   { 
-    id: 2, 
-    name: 'Trương Thành Đạt', 
-    nickname: 'Dat T. Truong', 
-    img: member2, 
-    traits: 'Hiền hòa dễ nuôi', 
-    hobby: 'Chơi game, cầu lông, chơi cờ, đánh piano, nghe nhạc', 
-    goal: 'Có người yêu', 
-    darkside: 'Lâu lâu nói chuyện vô tri' 
+    id: 2,
+    name: 'Trương Thành Đạt',
+    nickname: 'Dat T. Truong',
+    img: member2,
+    traits: 'Hiền hòa dễ nuôi',
+    hobby: 'Chơi game, cầu lông, chơi cờ, đánh piano, nghe nhạc',
+    goal: 'Có người yêu',
+    darkside: 'Lâu lâu nói chuyện vô tri',
+
+    mssv: '25127035',
+    phone: '0799747780',
+    email: 'ttdat2540@clc.fitus.edu.vn',
+    role: 'Thành viên'
   },
   { 
-    id: 3, 
-    name: 'Võ Lê Hoàng', 
-    nickname: 'Hoàng Salt Poyz', 
-    img: member3, 
-    traits: 'Hướng lung tung, hoà đồng với bạn bè', 
-    hobby: 'Chơi thể thao, chơi game, giải rubik, tập gym', 
-    goal: 'Săn phú bà', 
-    darkside: 'Không có mặt sáng' 
+    id: 3,
+    name: 'Võ Lê Hoàng',
+    nickname: 'Hoàng Salt Poyz',
+    img: member3,
+    traits: 'Hướng lung tung, hoà đồng với bạn bè',
+    hobby: 'Chơi thể thao, chơi game, giải rubik, tập gym',
+    goal: 'Săn phú bà',
+    darkside: 'Không có mặt sáng',
+
+    mssv: '25127193',
+    phone: '0375623445',
+    email: 'vlhoang2520@clc.fitus.edu.vn',
+    role: 'Thành viên'
   },
   { 
-    id: 4, 
-    name: 'Nguyễn Đình Hùng', 
-    nickname: 'Ben Alex hay Alex Ben hay Bex Len hay Alẽ', 
-    img: member4, 
-    traits: 'Một tổ hợp không hề dễ chịu của vui vẻ và trầm kẻm', 
-    hobby: 'Mọi thứ có thể làm cho tui tò mò (even sth dark 😈)', 
-    goal: 'Lật đổ 🔥🔥🔥', 
-    darkside: 'Hay thao túng tâm lý người khác 👀' 
+    id: 4,
+    name: 'Nguyễn Đình Hùng',
+    nickname: 'Ben Alex hay Alex Ben hay Bex Len hay Alẽ',
+    img: member4,
+    traits: 'Một tổ hợp không hề dễ chịu của vui vẻ và trầm kẻm',
+    hobby: 'Mọi thứ có thể làm cho tui tò mò (even sth dark 😈)',
+    goal: 'Lật đổ 🔥🔥🔥',
+    darkside: 'Hay thao túng tâm lý người khác 👀',
+
+    mssv: '25127194',
+    phone: '0961345536',
+    email: 'ndhung2518@clc.fitus.edu.vn',
+    role: 'Thành viên'
   },
   { 
-    id: 5, 
-    name: 'Hồ Đăng Thiên Phúc', 
-    nickname: 'PHC', 
-    img: member5, 
-    traits: 'Hòa đồng với bạn bè', 
-    hobby: 'Cầu lông, chơi game, đá banh, nghe nhạc', 
-    goal: 'Học tốt lập trình', 
-    darkside: 'Dễ nổi nóng' 
+    id: 5,
+    name: 'Hồ Đăng Thiên Phúc',
+    nickname: 'PHC',
+    img: member5,
+    traits: 'Hòa đồng với bạn bè',
+    hobby: 'Cầu lông, chơi game, đá banh, nghe nhạc',
+    goal: 'Học tốt lập trình',
+    darkside: 'Dễ nổi nóng',
+
+    mssv: '25127228',
+    phone: '0337613729',
+    email: 'hdtphuc2505@clc.fitus.edu.vn',
+    role: 'Thành viên'
   },
   { 
-    id: 6, 
-    name: 'Nguyễn Quốc Tuấn', 
-    nickname: 'Nguyễn Quốc Tuấn', 
-    img: member6, 
-    traits: 'Hướng nội', 
-    hobby: 'Đọc truyện tranh, tiểu thuyết, chơi game, chơi đàn, tập gym', 
-    goal: 'Qua môn, đi concert idol', 
-    darkside: 'Hay tách lẻ' 
+    id: 6,
+    name: 'Nguyễn Quốc Tuấn',
+    nickname: 'Nguyễn Quốc Tuấn',
+    img: member6,
+    traits: 'Hướng nội',
+    hobby: 'Đọc truyện tranh, tiểu thuyết, chơi game, chơi đàn, tập gym',
+    goal: 'Qua môn, đi concert idol',
+    darkside: 'Hay tách lẻ',
+
+    mssv: '25127248',
+    phone: '0888491311',
+    email: 'nqtuan2524@clc.fitus.edu.vn',
+    role: 'Thành viên'
   }
 ];
+
 
 export default function MemberDetail() {
   const { id } = useParams();
@@ -142,7 +174,27 @@ export default function MemberDetail() {
                                 <span className="attr-label text-danger">⚠️ Mặt tối (Darkside)</span>
                                 <span className="attr-value">{member.darkside}</span>
                             </div>
+                             <div className="attr-item">
+                        <span className="attr-label">MSSV</span>
+                        <span className="attr-value">{member.mssv}</span>
+                      </div>
+
+                      <div className="attr-item">
+                        <span className="attr-label">Số điện thoại</span>
+                        <span className="attr-value">{member.phone}</span>
+                      </div>
+
+                      <div className="attr-item">
+                        <span className="attr-label">Email</span>
+                        <span className="attr-value">{member.email}</span>
+                      </div>
+
+                      <div className="attr-item">
+                        <span className="attr-label">Vai trò</span>
+                        <span className="attr-value">{member.role}</span>
+                      </div>
                         </div>
+                       
 
                         <div className="action-buttons mt-4">
                             <Link to="/">

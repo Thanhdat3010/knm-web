@@ -1,4 +1,4 @@
-import React from 'react'; // Bỏ useState nếu không dùng
+import React from 'react';
 import MultiLevelNavbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Button, Container, Row, Col } from 'react-bootstrap';
@@ -127,30 +127,15 @@ Qua đó, đồ án muốn truyền tải thông điệp mạnh mẽ rằng: Th�
                         Trình duyệt không hỗ trợ video.
                     </video>
                   </div>
-                  <Carousel.Caption className="netflix-caption">
+                  {/* <Carousel.Caption className="netflix-caption">
                     <h3>{video.caption}</h3>
-                  </Carousel.Caption>
+                  </Carousel.Caption> */}
                 </Carousel.Item>
               ))}
             </Carousel>
           </div>
         </Container>
       </section>
-
-      {/* 5. GALLERY (Grid images) */}
-      {/* <section id="gallery" className="section dark-section pb-5">
-        <Container fluid className="px-5">
-          <h2 className="section-title">Hình ảnh nổi bật</h2>
-          <div className="gallery-grid">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <div key={i} className="gallery-item">
-                  <span>Scene {i + 1}</span>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section> */}
-
       <Footer />
     </div>
   );
