@@ -26,10 +26,10 @@ const Home = () => {
   ];
 
   const btsVideos = [
-    { id: 1, src: '/bts1.mp4'},
-    { id: 2, src: '/bts2.mp4'},
-    { id: 3, src: '/bts3.mp4'},
-    { id: 4, src: '/trailer.mp4'},
+    { id: 1, src: '/trailer.mp4'},
+    { id: 2, src: '/bts1.mp4'},
+    { id: 3, src: '/bts2.mp4'},
+    { id: 4, src: '/bts3.mp4'},
   ];
 
   return (
