@@ -26,9 +26,10 @@ const Home = () => {
   ];
 
   const btsVideos = [
-    { id: 1, src: '/bts1.mp4', caption: 'Hậu trường: Ben Alex quên lời' },
-    { id: 2, src: '/bts2.mp4', caption: 'Cảnh quay hỏng #2' },
-    { id: 3, src: '/bts3.mp4', caption: 'Nỗ lực của cả team' },
+    { id: 1, src: '/bts1.mp4'},
+    { id: 2, src: '/bts2.mp4'},
+    { id: 3, src: '/bts3.mp4'},
+    { id: 4, src: '/trailer.mp4'},
   ];
 
   return (
